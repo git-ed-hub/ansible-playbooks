@@ -1,0 +1,6 @@
+- hosts: servers
+  tasks:
+  - name: Install nginx
+    yum: 
+      name: nginx
+      state: latest
