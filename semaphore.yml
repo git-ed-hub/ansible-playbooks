@@ -1,6 +1,6 @@
 ---
 - name: install and start apache
-  hosts: server
+  hosts: 192.168.52.140
   
   tasks:
     - name: httpd package is present
