@@ -10,7 +10,7 @@
 
     - name: copiar archivos al server
       copy:
-        src: /palm1/
+        src: palm1/
         dest: /var/www/html/
 
     - name: httpd is started
