@@ -20,6 +20,7 @@ services:
     user: "${UID}:${GID}"
     ports:
       - 3000:3000
+    
     environment:
       - SEMAPHORE_DB_USER=semaphore
       - SEMAPHORE_DB_PASS=admin
@@ -32,7 +33,7 @@ services:
       - SEMAPHORE_ADMIN_NAME=admin
       - SEMAPHORE_ADMIN_EMAIL=admin@localhost
       - SEMAPHORE_ADMIN=admin
-      - SEMAPHORE_ACCESS_KEY_ENCRYPTION=BHag7tDGCFOlaogchdZvn+Wpaa4QfQK61sPIElsLEEM=  # add to your access key encryption !
+      - SEMAPHORE_ACCESS_KEY_ENCRYPTION=${pass}  # add to your access key encryption !
       - ANSIBLE_HOST_KEY_CHECKING=false  # (optional) change to true if you want to enable host key checking
     volumes:
       - ./inventory/:/inventory:ro

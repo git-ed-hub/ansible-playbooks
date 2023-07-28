@@ -18,7 +18,6 @@
         name: httpd
         state: started
 
-  tasks:
     - name: Abrir puerto 80 en firewalld
       firewalld:
         port: 80/tcp
